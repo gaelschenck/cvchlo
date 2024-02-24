@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        <title>{% block title %}{% endblock %}</title>
+
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -11,6 +11,44 @@
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
 {% block importmap %}{{ importmap('app') }}{% endblock %}
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" id="navId">
+    <li class="nav-item">
+        <a href="#tab1Id" class="nav-link active">Active</a>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#tab2Id">Action</a>
+            <a class="dropdown-item" href="#tab3Id">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#tab4Id">Action</a>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a href="#tab5Id" class="nav-link">Another link</a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link disabled">Disabled</a>
+    </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
+    <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
+    <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
+    <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
+    <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
+</div>
+
+<script>
+    $('#navId a').click(e => {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+</script>
         {% endblock %}
     </head>
     <body>
