@@ -13,7 +13,18 @@
         {% block importmap %}{{ importmap('app') }}{% endblock %}
 
         {% endblock %}
+
+        <div>
+            <li><a href="{{ path('home') }}">Accueil</li>
+            <li><a href="{{ path('app_patisserie') }}">Pâtisserie</li>
+            <li><a href="{{ path('app_boulangerie') }}">Boulangerie</li>
+            <li><a href="{{ path('app_contact') }}">Contact</li>
+            <li><a href="{{ path('app_login') }}">Login</li>
+            <li><a href="{{ path('app_user_new') }}">Inscription</li>
+            <li><a href="{{ path('app_forgot_password_request') }}">Mot de passe oublié ?</a></li>
+        </div>   
     </head>
+
     <body>
         {% block body %}{% endblock %}
     </body>
