@@ -15,14 +15,18 @@
         {% endblock %}
 
         <div>
-            <li><a href="{{ path('home') }}">Accueil</li>
-            <li><a href="{{ path('app_patisserie') }}">Pâtisserie</li>
-            <li><a href="{{ path('app_boulangerie') }}">Boulangerie</li>
-            <li><a href="{{ path('app_contact') }}">Contact</li>
-            <li><a href="{{ path('app_login') }}">Login</li>
-            <li><a href="{{ path('app_user_new') }}">Inscription</li>
+            <li><a href="{{ path('home') }}">Accueil</a></li>
+            <li><a href="{{ path('app_patisserie') }}">Pâtisserie</a></li>
+            <li><a href="{{ path('app_boulangerie') }}">Boulangerie</a></li>
+            <li><a href="{{ path('app_contact') }}">Contact</a></li>
+        </div>
+        <div><img id="logo" src="{{ asset("/images/logo.png") }}"/>
+        {# <div> 
+            <li><a href="{{ path('app_login') }}">Login</a></li>
+            <li><a href="{{ path('app_register') }}">Inscription</a></li>
             <li><a href="{{ path('app_forgot_password_request') }}">Mot de passe oublié ?</a></li>
-        </div>   
+            <li><a href="{{ path('app_logout') }}">Logout</a></li>
+        </div>    #}
     </head>
 
     <body>

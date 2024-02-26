@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    <h1> Dashboard </h1>
+    <p>Vous êtes bien sur votre page, soyez patients, elle sera bientôt fonctionnelle </p>
+
+    <li><a href="{{ path('new_product') }}">Nouveau produit</a></li>
+    <li><a href="{{ path('Modifier') }}">Modifier mes produits</a></li>
+    <li><a href="{{ path('home') }}">Voir mes produits</a></li>
+
+    <li><a href="{{ path('home') }}">Mes informations</a></li>
+    <li><a href="{{ path('home') }}">Modifier mes informations</a></li>
+    <li><a href="{{ path('app_logout') }}">Déconnexion</a></li>
+{% else %}
+<p> Mais qu'est ce que tu fais là ??? </p>
+{% endif %}
+
+{% endblock %}
